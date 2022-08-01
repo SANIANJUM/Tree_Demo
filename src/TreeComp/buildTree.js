@@ -6,8 +6,9 @@ const octokit = new Octokit({
 });
 
 const BuildTree = () => {
+  let userName = "SANIANJUM";
   async function build() {
-    let userName = "SANIANJUM";
+    
     let arrTree = new Array();
     const urlData = await octokit.request("GET /users/{userName}/repos", {
       userName: "USERNAME",
